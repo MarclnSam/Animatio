@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animatio</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+</head>
+<body>
+    <nav class="main_nav">
+        <div class="nav_logo">
+            <svg width="176" height="117" viewBox="0 0 176 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M58.304 70L57.8 67.336H54.008L53.504 70H50.24L53.48 53.2H58.448L61.52 70H58.304ZM55.856 56.32L54.92 61.912L54.392 64.768H57.392L56.84 61.912L55.904 56.32H55.856ZM70.4056 70L65.9176 60.712L65.7976 60.76L65.9416 63.592V70H62.9176V53.2H65.3416L69.7576 62.848L69.8776 62.8L69.6136 59.848V53.2H72.6376V70H70.4056ZM74.9411 70V53.2H78.2291V70H74.9411ZM86.6626 62.32H86.5666H86.6626L87.9346 57.064L88.9666 53.2H91.9666L93.0466 70H89.9026L89.4466 60.832H89.3266L87.5986 67.6H85.6306L83.9026 60.832H83.7826L83.3266 70H80.1826L81.2626 53.2H84.2626L85.2946 57.064L86.5666 62.32H86.6626ZM102.132 70L101.628 67.336H97.8361L97.3321 70H94.0681L97.3081 53.2H102.276L105.348 70H102.132ZM99.6841 56.32L98.7481 61.912L98.2201 64.768H101.22L100.668 61.912L99.7321 56.32H99.6841ZM108.005 56.08H104.381V53.2H114.893V56.08H111.269V70H108.005V56.08ZM116.285 70V53.2H119.573V70H116.285ZM129.71 53.2C130.83 54.112 131.662 55.336 132.206 56.872C132.75 58.408 133.022 59.992 133.022 61.624C133.022 63.24 132.758 64.776 132.23 66.232C131.702 67.688 130.862 68.944 129.71 70H124.766C123.614 68.944 122.774 67.688 122.246 66.232C121.718 64.776 121.454 63.24 121.454 61.624C121.454 59.992 121.726 58.408 122.27 56.872C122.814 55.336 123.646 54.112 124.766 53.2H129.71ZM126.374 67.216H128.102C128.502 66.752 128.838 66 129.11 64.96C129.398 63.904 129.542 62.792 129.542 61.624C129.542 60.456 129.406 59.36 129.134 58.336C128.862 57.296 128.526 56.544 128.126 56.08H126.374C125.974 56.544 125.63 57.296 125.342 58.336C125.07 59.36 124.934 60.456 124.934 61.624C124.934 62.792 125.07 63.904 125.342 64.96C125.63 66 125.974 66.752 126.374 67.216Z" fill="#333030"/>
+                <line x1="49" y1="50.5" x2="86" y2="50.5" stroke="#333030"/>
+                <line x1="49.5" y1="51" x2="49.5" y2="56" stroke="#333030"/>
+                <line x1="99" y1="72.5" x2="136" y2="72.5" stroke="#333030"/>
+                <path d="M135.5 73V66" stroke="#333030"/>
+            </svg>
+        </div>
+        <div class="nav_desktop">
+            <ul class="nav_desktop__list_container">
+                <li class="nav_desktop__list_item"><a href="#start">Start</a></li>  <!-- onclick="ShowSection('start')  -->  
+                <li class="nav_desktop__list_item"><a href="#portfolio">Portfolio</a></li>
+                <li class="nav_desktop__list_item"><a href="#about">O nas</a></li>
+                <li class="nav_desktop__list_item"><a href="#price">Cennik</a></li>
+                <li class="nav_desktop__list_item"><a href="#contact">Kontakt</a></li>
+            </ul>
+        </div>
+        <div class="nav_language_buttons">
+            <button class="nav_language_buttons_item" >EN</button>
+            <button class="nav_language_buttons_item" >PL</button>
+        </div>
+        <div class="nav_menu_button">
+            <svg class="hamburger_menu_button" width="40" height="40" viewBox="0 0 100 80" fill="black">
+                <rect y='20' width="80" height="8"></rect>
+                <rect y="35" width="80" height="8"></rect>
+                <rect y="50" width="80" height="8"></rect>
+            </svg>
+        </div>
+        <div class="nav_phone">
+            <ul class="nav_phone__list_container">
+                <li class="nav_phone__list_item">Start</li>
+                <li class="nav_phone__list_item">Portfolio</li>
+                <li class="nav_phone__list_item">O nas</li>
+                <li class="nav_phone__list_item">Cennik</li>
+                <li class="nav_phone__list_item">Kontakt</li>
+            </ul>
+        </div>
+    </nav>
+    <main class="start" id="start">
+        <div class="start_main_text_container">
+            <p class="start_main_text_item">Ożywiamy Świat Twoich Pomysłów </p>
+        </div>
+        <div class="start_type_text_container">
+            <span class="start_type_text_item">x</span>
+        </div>
+        <div   class="start_arrow_icon" >
+            <a href="#portfolio"> 
+                <svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.29289 9.70711C7.68342 10.0976 8.31658 10.0976 8.70711 9.70711L15.0711 3.34315C15.4616 2.95262 15.4616 2.31946 15.0711 1.92893C14.6805 1.53841 14.0474 1.53841 13.6569 1.92893L8 7.58579L2.34315 1.92893C1.95262 1.53841 1.31946 1.53841 0.928932 1.92893C0.538408 2.31946 0.538408 2.95262 0.928932 3.34315L7.29289 9.70711ZM7 0L7 9H9V0L7 0Z" fill="black"/>
+                </svg>
+            </a>
+        </div>
+    </main>
+    <section class="portfolio" id="portfolio">
+        <div class="portfolio_container">
+            <div class="portfolio_2d_container">
+                <p class="portfolio_2d_text">Animacje 2d</p>
+            </div>
+            <div class="portfolio_3d_container">
+                <p class="portfolio_3d_text">Animacje 3d</p>
+            </div>
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about_container">
+            
+            <p class="about_paragraph">Nasze studio animacji tworzy wyjątkowe historie, ożywiając Twoje pomysły z pasją i profesjonalizmem. Doświadczony zespół zapewnia najwyższą jakość animacji, które zachwycają i angażują.</p>
+            <img src="img/office.jpg" alt="Zdjecie naszego biura" class="about_container_img">
+        </div>
+    </section>
+    <section class="price" id="price">
+        <div class="cennik_container">
+            <h2 class="cennik__header">Usługi Animacji</h2>
+            <table class="cennik__tabela">
+                <thead>
+                    <tr>
+                        <th class="cennik__tabela__item">Usługa</th>
+                        <th class="cennik__tabela__item">Liczba sekund</th>
+                        <th class="cennik__tabela__item">Cena</th>
+                        <th class="cennik__tabela__item">Czas wykonania</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="cennik__tabela__item">Animacje reklamowe 2D</td>
+                        <td class="cennik__tabela__item">1</td>
+                        <td class="cennik__tabela__item">300 PLN</td>
+                        <td class="cennik__tabela__item">2 tygodnie (30s)</td>
+                    </tr>
+                    <tr>
+                        <td class="cennik__tabela__item">Animacje edukacyjne 2D</td>
+                        <td class="cennik__tabela__item">1</td>
+                        <td class="cennik__tabela__item">200 PLN</td>
+                        <td class="cennik__tabela__item" >3 tygodnie (30s)</td>
+                    </tr>
+                    <tr>
+                        <td class="cennik__tabela__item" >Wsparcie produkcji filmów animowanych 2D</td>
+                        <td class="cennik__tabela__item">300</td>
+                        <td class="cennik__tabela__item">90,000 PLN</td>
+                        <td class="cennik__tabela__item" >6 miesięcy</td>
+                    </tr>
+                    <tr>
+                        <td class="cennik__tabela__item" >Animacje na strony internetowe 2D</td>
+                        <td class="cennik__tabela__item">45</td>
+                        <td class="cennik__tabela__item">13,500 PLN</td>
+                        <td class="cennik__tabela__item" >1 miesiąc</td>
+                    </tr>
+                    <tr>
+                        <td class="cennik__tabela__item">Animacje reklamowe 3D</td>
+                        <td class="cennik__tabela__item">1</td>
+                        <td class="cennik__tabela__item">1000 PLN</td>
+                        <td class="cennik__tabela__item" >3 tygodnie (30s)</td>
+                    </tr>
+                    <tr>
+                        <td class="cennik__tabela__item" >Animacje edukacyjne 3D</td>
+                        <td class="cennik__tabela__item">1</td>
+                        <td class="cennik__tabela__item">800 PLN</td>
+                        <td class="cennik__tabela__item" >5 tygodni (30s)</td>
+                    </tr>
+                    <tr>
+                        <td class="cennik__tabela__item" >Wsparcie produkcji filmów animowanych 3D</td>
+                        <td class="cennik__tabela__item">300</td>
+                        <td class="cennik__tabela__item">300,000 PLN</td>
+                        <td class="cennik__tabela__item" >1 rok</td>
+                    </tr>
+                    <tr>
+                        <td class="cennik__tabela__item">Animacje na strony internetowe 3D</td>
+                        <td class="cennik__tabela__item">45</td>
+                        <td class="cennik__tabela__item">45,000 PLN</td>
+                        <td class="cennik__tabela__item" >2 miesiące</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+        </div>
+        </div>
+    </section>
+    <section class="contact" id="contact">
+        <div class="contact_container">
+            <h2 class="kontakt__header">Formularz Kontaktowy</h2>
+            <form class="kontakt__form" action="process_form.php" method="post">
+                <div class="kontakt__form__group">
+                    <label for="name">Imię i Nazwisko:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="kontakt__form__group">
+                    <label for="service">Usługa:</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>Wybierz rodzaj usługi</option> 
+                        <option value="Animacje reklamowe 2D" >Animacje reklamowe 2D</option>
+                        <option value="Animacje edukacyjne 2D" >Animacje edukacyjne 2D</option>
+                        <option value="Wsparcie produkcji filmów animowanych 2D">Wsparcie produkcji filmów animowanych 2D</option>
+                        <option value="Animacje na strony internetowe 2D" >Animacje na strony internetowe 2D</option>
+                        <option value="Animacje reklamowe 3D" >Animacje reklamowe 3D</option>
+                        <option value="Animacje edukacyjne 3D" >Animacje edukacyjne 3D</option>
+                        <option value="Wsparcie produkcji filmów animowanych 3D" >Wsparcie produkcji filmów animowanych 3D</option>
+                        <option value="Animacje na strony internetowe 3D">Animacje na strony internetowe 3D</option>
+                    </select>
+                </div>
+                <div class="kontakt__form__group">
+                    <label for="seconds">Liczba sekund:</label>
+                    <input type="number" id="seconds" name="seconds" required>
+                </div>
+                <div class="kontakt__form__group">
+                    <label for="time" >Czas wykonania (w tygodniach):</label>
+                    <input type="number" id="time" name="time" required>
+                </div>
+                <div class="kontakt__form__group">
+                    <label for="message">Dłuższa wiadomość:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="kontakt__form__group">
+                    <div class="kontakt_form__group__consent">
+                        <label for="consent">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span >Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z polityką prywatności.</span>
+                        </label>
+                    </div> 
+                </div>
+                <div class="kontakt__form__group">
+                    <button type="submit" class="button_sumbit" >Wyślij</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+
+    
+</body>
+</html>
