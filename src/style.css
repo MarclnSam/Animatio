@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Roboto:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+.nav_main {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.616);
+    font-size: 1.25rem;
+}
+.nav_main__items a {
+    color: #333030;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo {
+    display: inline-block;
+}
+.nav_main__items {
+    display: inline-block;
+    margin: 0 2rem 0 0;
+}
+.nav_main_item {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 2rem 0 0;
+    color: #333030;
+}
+.hamburger_menu_button {
+    cursor: pointer;
+}
+.languages_nav {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.button_languages {
+    background-color: #f1f1f1;
+    border: 1px solid #333;
+    color: #333;
+    padding: 0.6rem 1.3rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.button_languages:hover {
+    background-color: #333;
+    color: #f1f1f1;
+}
+
+.button_languages:active {
+    background-color: #555;
+    color: #fff;
+}
+
+.nav_phone {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: #333030;
+    color: #ffd1d1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    display: none;
+    font-size: 6rem;
+    overflow-y: scroll;
+}
+
+.nav_phone a {
+    color: #ffd1d1;
+    text-decoration: none;
+}
+.nav_phone__items {
+    height: 100vh;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.nav_phone__item {
+    padding: 2rem;
+    border: 2px solid #ffd1d1;
+    text-align: center;
+}
+.nav_phone__item:hover,
+.nav_phone__item:active,
+.nav_phone__items__close:hover,
+.nav_phone__items__close:active {
+    cursor: pointer;
+    background-color: #795050;
+    color: #333030;
+}
+.nav_phone__items__close {
+    border: 2px solid #ffd1d1;
+    text-align: center;
+}
+.nav_phone__items__close__paragraph {
+    font-size: 1.5rem;
+}
+.nav_phone__items__close__header {
+    font-family: 'Montserrat', sans-serif;
+}
+.polityka{
+    cursor: pointer;
+}
+.popup-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; 
+}
+
+.popup-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+
+.popup-message button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.popup-message button:hover {
+    background-color: #0056b3;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+.popup h2,
+.popup p {
+    margin: 0;
+    padding: 0;
+}
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.background_picture {
+    position: relative;
+    background-image: url(assets/images/las.png);
+    opacity: 95%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.background_picture__logo {
+    position: absolute;
+    bottom: 50%;
+    font-size: 3.25rem;
+    color: black;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    opacity: 80%;
+}
+.background_picture__typing_word {
+    position: absolute;
+    bottom: 30%;
+    font-size: 3.25rem;
+    color: black;
+    min-width: 1rem;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    opacity: 80%;
+}
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    bottom: 5%;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0.616);
+    border: 1px solid #333030;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4rem;
+}
+.credits {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    border: 2px solid red;
+    border-radius: 8px;
+    background-color: rgb(247, 43, 43);
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 1rem;
+}
+.credits:hover,
+.credits:active {
+    background-color: white;
+    color: rgb(247, 43, 43);
+    cursor: pointer;
+}
+
+/* 2 */
+/* Tworzę dwa kontenery*/
+.graphic_types {
+    background-color: #272d3b;
+    display: flex;
+
+    justify-content: space-around;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Tworzę prawy kontener i centruje elementy w środku*/
+.graphic_types__2d {
+    width: 49.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Tworzę lewy kontener i centruje elementy w środku*/
+.graphic_types__3d {
+    width: 49.8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* nadaje wymiary pudełku w lewym konterze dołączam zdjęcie*/
+.graphic_types__3d__photo {
+    width: 75%;
+    height: 75%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 58, 0.2);
+
+    background-image: url(assets/images/3d.jpg);
+    border: 1px solid rgba(0, 0, 58, 0.2);
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2rem;
+    font-size: 4rem;
+}
+/* nadaje wymiary pudełku w prawym konterze dołączam zdjęcie*/
+.graphic_types__2d__photo {
+    width: 75%;
+    height: 75%;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 58, 0.2);
+
+    border: 1px solid rgba(0, 0, 58, 0.2);
+    border-radius: 16px;
+
+    background-image: url(assets/images/2d.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 2rem;
+}
+/* przyciemnienie*/
+.graphic_types__3d__photo:hover,
+.graphic_types__3d__photo:active {
+    background-color: #94cccb;
+    opacity: 75%;
+    cursor: pointer;
+}
+/* przyciemnienie*/
+.graphic_types__2d__photo:hover,
+.graphic_types__2d__photo:active {
+    background-color: #e27f6f;
+    opacity: 75%;
+    cursor: pointer;
+}
+
+/* formatuje tekst na tle zdjęcia*/
+.graphic_types__3d__photo__tittle,
+.graphic_types__2d__photo__tittle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 3rem;
+
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 3rem;
+    opacity: 80%;
+    padding: 0.5rem;
+    text-align: center;
+}
+/* o nas 3 sekcja*/
+.onas {
+    background-color: #272d3b;
+    min-height: 100vh;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.onas {
+    color: #ffd1d1;
+    text-align: center;
+}
+.onas__header {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-size: 5rem;
+    margin: 8rem 5rem 2rem 5rem;
+}
+.onas__paragraph {
+    font-size: 2rem;
+    width: 70%;
+    text-align: center;
+    margin: 10rem 5rem 2rem 5rem;
+}
+.onas__office_box {
+    max-width: 1200px;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    width: 800px; 
+    height: 448px; 
+    border-radius: 2rem;
+    border: 1px solid rgba(0, 0, 58, 0.2);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 58, 0.2);
+    border-radius: 2rem;
+    background-image: url('assets/images/office.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+.onas__office_box__image {
+    width: 100%;
+    height: 100%;
+   
+}
+/* kariera 4 sekcja*/
+.cennik {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100vh;
+    background-color: #272d3b;
+    color: #ffd1d1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    overflow-x: auto;
+}
+.cennik__header {
+    margin: 0 2rem 2rem 2rem;
+}
+.cennik__tabela {
+    text-align: left;
+    border-collapse: collapse;
+}
+.cennik__tabela__item {
+    border: 2px solid #ffd1d1;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.kontakt_header {
+    margin: 0 2rem 2rem 2rem;
+}
+
+.kontakt {
+    font-size: 1.5rem;
+    padding: 2rem;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #272d3b;
+    color: #ffd1d1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.kontakt__header {
+    margin: 0rem 2rem 2rem 2rem;
+    font-size: 2.5rem;
+    /*  overflow-wrap:normal;  >?????*/
+}
+.kontakt__form {
+    max-width: 600px;
+    width: 100%;
+    padding: 1.2rem;
+    border: 2px solid #ffd1d1;
+    border-radius: 10px;
+    background-color: #333030;
+}
+.kontakt__form__group {
+    margin-bottom: 1rem;
+}
+.kontakt__form__group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffd1d1;
+}
+.kontakt__form__group input,
+.kontakt__form__group select,
+.kontakt__form__group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #272d3b;
+    color: #ffd1d1;
+}
+
+.kontakt__form__group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.kontakt__form__group button:hover {
+    background-color: #218838;
+}
+#cookieConsent {
+    position: fixed;
+    background-color: #2b2b2b;
+    color: white;
+    padding: 10px;
+    
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+#cookieConsent a {
+    color: #ffd700;
+    text-decoration: underline;
+}
+#closeCookieConsent {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .body {
+        overflow-y: hidden;
+    }
+    .nav_phone {
+        font-size: 5rem;
+    }
+    .nav_phone__item {
+        padding: 1rem;
+    }
+    .nav_main__items {
+        display: none;
+    }
+
+    /* Tworzę prawy kontener i centruje elementy w środku*/
+    .graphic_types {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+    }
+    .graphic_types__2d {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* Tworzę lewy kontener i centruje elementy w środku*/
+    .graphic_types__3d {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* nadaje wymiary pudełku w lewym konterze dołączam zdjęcie*/
+}
+.kontakt {
+    padding-top: 5rem;
+}
+.cennik {
+    padding-top: 6rem;
+}
+@media (max-width: 640px) {
+}
+@media (max-width: 750px) {
+    body {
+        background-color: #272d3b;
+    }
+    .kontakt {
+        padding-top: 5rem;
+    }
+    .cennik {
+        padding-top: 6rem;
+    }
+    .onas__paragraph {
+        padding-top: 10rem;
+    }
+    .nav_main__items {
+        display: none;
+    }
+    .background_picture__logo {
+        margin: 0 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .background_picture__typing_word {
+        margin: 1rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .credits {
+        padding: 0.5rem;
+        font-size: 0.6rem;
+    }
+
+    /* formatuje tekst na tle zdjęcia*/
+    .graphic_types__3d__photo__tittle,
+    .graphic_types__2d__photo__tittle {
+        font-size: 2rem;
+    }
+    .onas {
+        min-height: 0vh;
+    }
+    .onas__header {
+        font-size: 2.5rem;
+        margin: 0rem 2.5rem 1rem 2.5rem;
+    }
+    .onas__paragraph {
+        font-size: 1rem;
+        margin: 1rem;
+    }
+    .cennik__header {
+        margin: 0 1rem 1rem 1rem;
+    }
+    .cennik__tabela__item {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+}
+
+#kontakt {
+    display: none;
+}
+#cennik {
+    display: none;
+}
+#onas {
+    display: none;
+}
+#portfolio {
+    display: none;
+}
